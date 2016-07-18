@@ -4,7 +4,7 @@
 
 *От переводчика:*
 <br>
-*Представляю вам перевод очень краткого руководства по стандату ES6.*
+*Представляю вам перевод очень краткого руководства по стандарту ES6.*
 *Оригинальный текст в некоторых случаях был дополнен или заменён на более подходящий источник. Например, часть определения ключевого слова `const` является переводом документации с [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).*
 
 *Чтобы лучше разобраться в некоторых концепциях (для выполнения качественного перевода) использовалось описание стандарта на сайте [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript), руководство ["You Don't Know JS: ES6 & Beyond"](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch2.md) и [учебник Ильи Кантора](https://learn.javascript.ru/es-modern).*
