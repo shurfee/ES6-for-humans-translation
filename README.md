@@ -3,9 +3,9 @@
 *От переводчика:*
 <br>
 *Представляю вам перевод очень краткого руководства по стандарту ES6.*
-*Оригинальный текст в некоторых случаях был дополнен или заменён на более подходящий источник. Например, часть определения ключевого слова `const` является переводом документации с [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const).*
+*Оригинальный текст в некоторых случаях был дополнен или заменён на более подходящий источник. Например, часть определения ключевого слова `const` является переводом документации с [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/const).*
 
-*Чтобы лучше разобраться в некоторых концепциях (для выполнения качественного перевода) использовалось описание стандарта на сайте [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript), руководство ["You Don't Know JS: ES6 & Beyond"](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch2.md) и [учебник Ильи Кантора](https://learn.javascript.ru/es-modern).*
+*Чтобы лучше разобраться в некоторых концепциях (для выполнения качественного перевода) использовалось описание стандарта на сайте [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript), руководство ["You Don't Know JS: ES6 & Beyond"](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch2.md) и [учебник Ильи Кантора](https://learn.javascript.ru/es-modern).*
 
 <br>
 
@@ -75,7 +75,7 @@ console.log(a); // 2
 * `let` (как и `const`) объявленные в цикле `for` (и `for (in)`) так же попадает в блочную область видимости этого цикла:
         
     ```javascript
-    for (let i=0;i<10;i++) {/* ... */};
+    for (let i = 0 ;i < 10; i++) {/* ... */};
     console.log(i); // → RefferenceError: i is not defined
     ```
 
@@ -157,7 +157,7 @@ function Person() {
 
 var p = new Person();
 ```
-[Узнать больше о 'Лексическом this' в стрелочных функциях на сайте MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Lexical_this)
+[Узнать больше о 'Лексическом this' в стрелочных функциях на сайте MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Lexical_this)
 
 <br>
 
@@ -169,7 +169,7 @@ ES6 позволяет установить параметры по умолча
 let getFinalPrice = (price, tax = 0.7) => price + price * tax;
 getFinalPrice(500); // 850, так как значение tax не задано
 
-getFinalPrice(500, 0.2); // 600, значение tax по-умолчанию заменяется на 0.2
+getFinalPrice(500, 0.2); // 600, значение tax по умолчанию заменяется на 0.2
 ```
 
 <br>
@@ -519,7 +519,7 @@ let c = new Porsche();
 
 Также, в классе-потомке можно вызвать метод родительского класса с помощью `super.имяМетодаРодителя()`.
 
-[Узнать больше о классах на сайте MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)
+[Узнать больше о классах на сайте MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes)
 
 О чём стоит помнить:
 
@@ -561,7 +561,7 @@ console.log(Object.getOwnPropertyNames(o)); // val
 
 Итератор обращается к элементам коллекции по одному, в то же время сохраняя память о своей текущей позиции в этой коллекции. У итератора есть метод `next()`, который возвращает следующий элемент в последовательности. Этот метод возвращает объект с двумя свойствами: done (окончен ли перебор) и value (значение).
 
-В ES6 есть метод `Symbol.iterator`, который определяет итератор для объекта по-умолчанию. При каждой необходимости перебора в цикле для объекта (например, в начале цикла for..of), его метод итератора вызывается без аргументов, и возвращённый итератор используется для того, чтобы получить значения для перебора.
+В ES6 есть метод `Symbol.iterator`, который определяет итератор для объекта по умолчанию. При каждой необходимости перебора в цикле для объекта (например, в начале цикла for..of), его метод итератора вызывается без аргументов, и возвращённый итератор используется для того, чтобы получить значения для перебора.
 
 Посмотрим на массив, который является перебираемым (iterable), и на итератор, который есть у массива для обработки его значений:
 
@@ -579,7 +579,7 @@ itr.next(); // { value: undefined, done: true }
 Заметим, что можно написать собственный итератор через определение `obj[Symbol.iterator]()` с описанием объекта.
 
 Подробнее про итераторы:
-[На сайте MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+[На сайте MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 
 <br>
 
@@ -655,7 +655,7 @@ var p = new Promise(function(resolve, reject) {
 });
 
 var eventuallyAdd1 = (val) => {
-    return new Promise(function(resolve, reject){
+    return new Promise(function(resolve, reject) {
         resolve(val + 1);
     });
 }
